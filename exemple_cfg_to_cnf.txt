@@ -1,0 +1,62 @@
+------------------------------------------------------
+exemplu 1:
+
+S -> aABa | CD | bbAC
+A -> bc | d | #
+B -> # | E
+C -> A | dcabb | S
+D -> BAd | B
+E -> Ea | bbE
+F -> abc
+
+Transformare CNF:
+
+(Y8) -> (X1)(X1)
+(Y7) -> AS
+(Y5) -> (X2)(Y6)
+(Y3) -> (X1)S
+(Y2) -> (X1)(Y7)
+(Y1) -> A(X3)
+(X4) -> d
+(X3) -> a
+(X1) -> b
+S' -> S #
+(Y4) -> (X1)A
+A -> (X1)(X2) d
+(X2) -> c
+S -> (X3)(Y1) SD (X1)(Y2) (X3)(X3) (X1)(Y3) (X1)(Y4) (X1)(X1) (X4)(Y5)
+(Y6) -> (X3)(Y8)
+D -> A(X4) d
+
+-----------------------------------------------------------------
+exemplu 2:
+
+S -> ASB
+A -> aAS | a | #
+B -> SbS | A | bb
+
+Transformare CNF:
+
+(Y3) -> AS
+(Y2) -> SB
+A -> (X2)(Y3) a (X2)S
+S -> A(Y2) SB AS
+(X1) -> b
+(X2) -> a
+B -> S(Y1) (X1)(X1)
+(Y1) -> (X1)S
+
+--------------------------------------------------------------------
+exemplu 3:
+
+S -> a | aA | B
+A -> aBB | #
+B -> Aa | b
+
+Transformare CNF:
+
+(Y1) -> BB
+B -> A(X1) b a
+(X1) -> a
+S -> a (X1)A A(X1) b
+A -> (X1)(Y1)
