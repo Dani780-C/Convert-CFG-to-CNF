@@ -1,1 +1,3 @@
-# Convert-CFG-to-CNF
+# Convert-CFG-to-CNF // C++
+### (Context Free Grammar to Chomsky's Normal Form)
+
